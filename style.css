@@ -304,6 +304,7 @@ main .analytics .item:nth-child(4){
     background: #1665af;
 }
 
+<<<<<<< HEAD
 main .separator input{
     border: none;
     color: #005baf;
@@ -525,3 +526,5 @@ main .planning .item > i{
     background: #efdbd5;
     border-radius: 16px;
 }
+=======
+>>>>>>> 6f9071327b2cd98a07dc28f0d8746fe9098a85b4
