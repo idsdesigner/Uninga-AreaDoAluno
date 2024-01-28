@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #f15a24;
+}
+
+i{
+    font-size: 1.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    height: 100vh;
+}
+
+.container .left-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+}
+
+.container .left-section .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.container .left-section .logo img{
+    height: 3.5rem;
+    object-fit: cover;
+}
+
+
+.menu-btn{
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #efdbd5;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn i{
+    font-size: 1.125rem;
+    color: #f15a24;
+}
+
+.container .left-section .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.container .left-section .sidebar .item{
+    display: flex;
+    gap: 1.25rem;
+    cursor: pointer;
+}
+
+.container .left-section .sidebar i{
+    color: #BDBDBD;
+    transition: all 0.3S ease;
+}
+
+.container .left-section .sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 0.8rem;
+    color: #BDBDBD;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a,
+.container .left-section .sidebar .item#active i,
+.container .left-section .upgrade .link i{
+    color: #f15a24;
+}
+
+.container .left-section .sidebar .item a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: #f15a24;
+    right: -1.8rem;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(116%);
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a::after{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.container .left-section .pic img{
+    width: 17rem;
+}
+
+.container .left-section .upgrade{
+    background: #efdbd5;
+    height: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 1.125rem;
+    cursor: pointer;
+}
+
+.container .left-section .upgrade .link{
+    display: flex;
+    align-items: center;
+     justify-content: space-between;
+}
+
+.container .left-section .upgrade .link a{
+    font-size: 0.75rem;
+}
+
+
+
+
+main{
+    border-right: 2px solid #F0F0F0;
+    border-left: 2px solid #F0F0F0;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+}
+
+main header{
+    display: flex;
+    align-items: center;
+    gap: 0.937rem;
+}
+
+main header h5{
+    font-size: 1.125rem;
+    color: #f15a24;
+    font-weight: 400;
+}
+
+main .separator{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+main .separator .info{
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+main .separator .info h3{
+    font-size: 1.875rem;
+}
+
+main .separator .info a{
+    margin-top: 0.375rem;
+    font-size: 0.875rem;
+}
+
+main .separator .search{
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+main .separator .search i{
+    font-size: 1.25rem;
+    color: #BDBDBD;
+}
+
+main .separator .search input{
+    border: none;
+    font-size: 0.875rem;
+    width: 5rem;
+    outline: none;
+}
+
+main .separator .search input::placeholder{
+    color: #BDBDBD;
+}
+
+main .analytics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+main .analytics .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8.75rem;
+    min-width: 13.3rem;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+}
+
+main .analytics .item .progress{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .analytics .item .progress .info h5{
+    color: #fff;
+    font-size: 1.25;
+    font-weight: bold;
+}
+
+main .analytics .item .progress .info p{
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+main .analytics .item .progress .progress-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+}
+
+main .analytics .item:nth-child(1) .progress .progress-bar{
+    background: radial-gradient(closest-side, #1665af 79%, transparent 80% 100%),
+    conic-gradient(#005baf 25%, #fff 0%);
+}
+
+main .analytics .item:nth-child(2) .progress .progress-bar{
+    background: radial-gradient(closest-side, #f15a24 79%, transparent 80% 100%),
+    conic-gradient(#ff4400 65%, #fff 0%);
+}
+
+main .analytics .item:nth-child(3) .progress .progress-bar{
+    background: radial-gradient(closest-side, #f15a24 79%, transparent 80% 100%),
+    conic-gradient(#ff4400 45%, #fff 0%);
+}
+
+main .analytics .item:nth-child(4) .progress .progress-bar{
+    background: radial-gradient(closest-side, #1665af 79%, transparent 80% 100%),
+    conic-gradient(#005baf 25%, #fff 0%);
+}
+
+main .analytics .item .progress .progress-bar::before{
+    font-size: 0.625rem;
+    color: #fff;
+}
+
+main .analytics .item:nth-child(1) .progress .progress-bar::before,
+main .analytics .item:nth-child(4)  .progress .progress-bar::before {
+    content: "75%";
+}
+
+main .analytics .item:nth-child(2) .progress .progress-bar::before{
+    content: "35%";
+}
+
+main .analytics .item:nth-child(3) .progress .progress-bar::before{
+    content: "65%";
+}
+
+main .analytics .item i{
+    font-size: 5rem;
+    color: #fff;
+}
+
+main .analytics .item:nth-child(1){
+    background: #1665af;
+}
+
+main .analytics .item:nth-child(2){
+    background: #f15a24;
+}
+
+main .analytics .item:nth-child(3){
+    background: #f15a24;
+}
+
+main .analytics .item:nth-child(4){
+    background: #1665af;
+}
+
+main .separator input{
+    border: none;
+    color: #005baf;
+    font-weight: bold;
+    outline: none;
+    width: 100px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    opacity: 0.5;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+main .planning{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+main .planning .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+}
+
+main .planning .item .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .planning .item .left .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .planning .item:nth-child(1) .left .icon{
+    background: #D1E6F9;
+}
+
+main .planning .item:nth-child(1) .left .icon i{
+    color: #369FFF;
+} 
+
+main .planning .item:nth-child(2) .left .icon{
+    background: #f9e5d2;
+}
+
+main .planning .item:nth-child(2) .left .icon i{
+    color: #Ff993a;
+} 
+
+main .planning .item:nth-child(3) .left .icon{
+    background: #E2EDD2;
+} 
+
+main .planning .item:nth-child(3) .left .icon i{
+    color: #8AC53E;
+} 
+
+main .planning .item:nth-child(4) .left .icon{
+    background: #F9F0D3;
+} 
+
+main .planning .item:nth-child(4) .left .icon i{
+    color: #FFD143;
+}
+
+main .planning .item .left .details h5{
+    font-size: 12;
+    font-weight: 600;
+}
+
+main .planning .item .left .details p{
+    font-size: 12px;
+    color: #BDBDBD;
+}
+
+main .planning .item > i{
+    cursor: pointer;
+}
+
+.container .right-section{
+    padding: 40px 40px 0 40px;
+}
+
+.container .right-section .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .right-section .top > i{
+    color: #909090;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right-section .top > i::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: #EB5757;
+    border-radius: 50%;
+    right: 0;
+}
+
+.container .right-section .top .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #efdbd5;
+    width: 244px;
+    height: 60px;
+    border-radius: 16px;
+}
+
+.container .right-section .top .profile > i{
+    cursor: pointer;
+}
+
+.container .right-section .top .profile .left{
+    display: flex;
+    gap: 15px;
+}
+
+.container .right-section .top .profile .left img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container .right-section .top .profile .left .user h5{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container .right-section .top .profile .left .user a{
+    font-size: 12px;
+}
+
+.container .right-section .separator#first{
+    margin-top: 8px;
+}
+
+.container .right-section .separator h4{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.container .right-section .stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 20px
+}
+
+.container .right-section .stats .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+    padding: 25px;
+    background: #efdbd5;
+    border-radius: 20px;
+}
+
+.container .right-section .stats .item .top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container .right-section .stats .top p{
+    font-size: 16px;
+    color: #f15a24;
+    font-weight: 500;
+}
+
+.container .right-section .stats .item .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .right-section .stats .item .bottom .line{
+    width: 4px;
+    height: 30px;
+    background: #f15a24;
+    border-radius: 20px;
+}
+
+.container .right-section .stats .item .bottom h3{
+    font-size: 40px;
+    color: #f15a24;
+}
+
+.container .right-section .weekly{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    background: #efdbd5;
+    border-radius: 16px;
+}
