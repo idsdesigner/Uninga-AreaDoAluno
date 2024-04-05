@@ -36,9 +36,12 @@ i{
     gap: 0.6rem;
 }
 
-.container .left-section .logo img{
+.container .left-section .logo .logo-image{
     height: 3.5rem;
-    object-fit: cover;
+    width: 9rem;
+    background-image: url('assets/logo.png'); /* imagem padrão */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -304,7 +307,6 @@ main .analytics .item:nth-child(4){
     background: #1665af;
 }
 
-<<<<<<< HEAD
 main .separator input{
     border: none;
     color: #005baf;
@@ -526,5 +528,150 @@ main .planning .item > i{
     background: #efdbd5;
     border-radius: 16px;
 }
-=======
->>>>>>> 6f9071327b2cd98a07dc28f0d8746fe9098a85b4
+
+.container .right-section .weekly .title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .right-section .weekly .title .line{
+    background-color: #f15a24;
+    width: 6px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.container .right-section .weekly h5{
+    font-size: 18px;
+}
+
+.container .right-section .weekly .progress-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, #efdbd5 79%, transparent 80% 100%),
+    conic-gradient(#f15a24 75%, #BDBDBD 0%);
+}
+
+.container .right-section .weekly .progress-bar::before{
+    content: "3/4";
+    font-size: 14px;
+    color: #000;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .container{
+        grid-template-columns: 1fr 6fr 5fr;
+    }
+
+    .container .left-section, .container main, .container .right-section{
+        padding: 20px 20px 0 20px;
+    }
+
+    .container .left-section .logo a,
+    .container .left-section .sidebar a,
+    .container .left-section .pic img,
+    .container .left-section .upgrade{
+        display: none;
+    }
+
+    .container .left-section .logo .logo-image {
+        background-image: url('assets/logo-uninga-menor.svg'); /* imagem para telas menores */
+        height: 3.5rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .left-section{
+        position: fixed;
+        height: 60vh;
+        background-color: #fff;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        top: -60vh;
+    }
+
+    .container .left-section .logo{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container .left-section .logo .menu-btn,
+    main header .menu-btn{
+        display: flex;
+    }
+
+    main h5{
+        font-size: 14px;
+    }
+
+    main .separator .info{
+        gap: 15px;
+    }
+
+    main .separator .info h3,
+    .container .right-section .separator h4{
+        font-size: 20px;
+    }
+
+    main .analytics .item{
+        min-width: 200px;
+    }
+
+    main .analytics .item i{
+        display: none;
+    }
+
+    main .planning{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    main .planning .item{
+        padding: 8px;
+    }
+
+    .container .right-section .stats .item{
+        height: 160px;
+        padding: 20px;
+    }
+
+    .container .right-section .stats .item .top p{
+        font-size: 14px;
+    }
+
+    .container .right-section .stats .item .bottom h3{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+    }
+
+    .container .right-section > .top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: -100;
+    }
+
+    .container .right-section .weekly{
+        margin-bottom: 20px;
+    }
+}
